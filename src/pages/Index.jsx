@@ -1,16 +1,18 @@
-import { Box, Container, Heading, Text, SimpleGrid, Image, Stack, Button, Icon, Flex, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container, Text, SimpleGrid, Image, Stack, Button, Icon, Flex, useColorModeValue } from "@chakra-ui/react";
+const Logo = () => (
+  <Stack align={"center"} mb={5}>
+    <Text fontSize="5xl" fontWeight="bold" bgClip="text" bgGradient="linear(to-r, orange.400, yellow.400)">
+      Die Samtpfoten
+    </Text>
+  </Stack>
+);
 import { FaCat, FaPaw, FaHeart } from "react-icons/fa";
 
 const Index = () => {
   return (
     <Container maxW={"5xl"}>
       <Stack textAlign={"center"} align={"center"} spacing={{ base: 8, md: 10 }} py={{ base: 20, md: 28 }}>
-        <Heading fontWeight={600} fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }} lineHeight={"110%"}>
-          Everything About <br />
-          <Text as={"span"} color={"orange.400"}>
-            Cats
-          </Text>
-        </Heading>
+        <Logo />
         <Text color={"gray.500"} maxW={"3xl"}>
           Discover the fascinating world of cats, their breeds, care tips, and the unique bond they share with their humans.
         </Text>
