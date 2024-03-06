@@ -1,11 +1,5 @@
 import { Box, Container, Text, SimpleGrid, Image, Stack, Button, Icon, Flex, useColorModeValue } from "@chakra-ui/react";
-const Logo = () => (
-  <Stack align={"center"} mb={5}>
-    <Text fontSize="5xl" fontWeight="bold" bgClip="text" bgGradient="linear(to-r, orange.400, yellow.400)">
-      Die Samtpfoten
-    </Text>
-  </Stack>
-);
+import Logo from "../components/Logo.jsx";
 import { FaCat, FaPaw, FaHeart } from "react-icons/fa";
 
 const Index = () => {
