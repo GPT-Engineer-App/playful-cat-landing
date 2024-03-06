@@ -27,22 +27,23 @@ const Index = () => {
 
       <Box p={4}>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-          <Feature icon={<FaCat />} title={"Breeds"} text={"Explore a wide variety of cat breeds, each with its unique characteristics and personality."} />
-          <Feature icon={<FaHeart />} title={"Adoption"} text={"Find out how you can adopt a furry friend and give them the loving home they deserve."} />
-          <Feature icon={<FaPaw />} title={"Care"} text={"Learn about the best practices for taking care of your cat, ensuring a happy and healthy life."} />
+          <Feature icon={<FaCat />} title={"Breeds"} text={"Explore a wide variety of cat breeds, each with its unique characteristics and personality."} image="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" />
+          <Feature icon={<FaHeart />} title={"Adoption"} text={"Find out how you can adopt a furry friend and give them the loving home they deserve."} image="https://images.unsplash.com/photo-1605346431349-ff6e0b5a2d3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" />
+          <Feature icon={<FaPaw />} title={"Care"} text={"Learn about the best practices for taking care of your cat, ensuring a happy and healthy life."} image="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" />
         </SimpleGrid>
       </Box>
     </Container>
   );
 };
 
-const Feature = ({ title, text, icon }) => {
+const Feature = ({ title, text, icon, image }) => {
   return (
     <Stack>
       <Flex w={16} h={16} align={"center"} justify={"center"} color={"white"} rounded={"full"} bg={useColorModeValue("orange.500", "orange.300")} mb={1}>
         {icon}
       </Flex>
       <Text fontWeight={600}>{title}</Text>
+      <Image src={image} boxSize="160px" objectFit="cover" borderRadius="md" alt={title} />
       <Text color={"gray.600"}>{text}</Text>
     </Stack>
   );
