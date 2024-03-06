@@ -1,15 +1,11 @@
 import { Box, Flex, Text, Icon, Stack } from "@chakra-ui/react";
-import { FaPaw } from "react-icons/fa";
+import { FaCat } from "react-icons/fa";
 
 const Logo = () => {
   return (
     <Flex align="center">
-      <Stack direction="row" spacing="-0.5" align="center">
-        <Box w={4} h={4} borderTopLeftRadius="full" borderTopRightRadius="full" bg="orange.400" />
-        <Icon as={FaPaw} w={8} h={8} color="orange.400" />
-        <Box w={4} h={4} borderTopLeftRadius="full" borderTopRightRadius="full" bg="orange.400" />
-      </Stack>
-      <Text fontSize="xl" fontWeight="bold" ml={2}>
+      <Icon as={FaCat} w={10} h={10} color="orange.400" />
+      <Text fontSize="xl" fontWeight="bold" ml={2} fontFamily="'Caveat', cursive">
         Die Samtpfoten
       </Text>
     </Flex>
